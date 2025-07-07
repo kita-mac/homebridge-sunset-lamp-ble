@@ -1,6 +1,6 @@
 # homebridge-sunset-lamp-ble
 
-Homebridge plugin for [this specific sunset lamp](https://ja.aliexpress.com/item/1005002359444838.html), it also works with other devices that use the same ["iStrip+ app"](https://apps.apple.com/us/app/istrip/id1524125189), including compatible LED strips. This plugin has an encryption key that is hardcoded in the device so it likely will not work with other devices.
+Homebridge plugin for [this specific sunset lamp](https://ja.aliexpress.com/item/1005002359444838.html), it should also works with other devices that use the same ["iStrip+ app"](https://apps.apple.com/us/app/istrip/id1524125189), including compatible LED strips. This plugin has an encryption key that is hardcoded in the device so it likely will not work with other devices.
 
 # Installation and Configuration
 
@@ -19,7 +19,7 @@ Add an accessory and configure the `name` (anything you like!) and `ble_address`
 },
 ```
 
-If you need to find the address of your lamp or LED strip, you can add an accessory with no `ble_address` and check your homebridge logs. It seems these particular lamps always advertise with a name in the format of `SSL-DDEEFF` where `DDEEFF` is the last 6 letters of the address. Supported LED strips on the other hand seem to advertise as `YH-AAEEFF` where `AA` is the first 2 letters `EEFF` is the last 4 letter of the address.
+If you need to find the address of your lamp or LED strip, you can add an accessory with no `ble_address` and check your homebridge logs. It seems these particular lamps always advertise with a name in the format of `SSL-DDEEFF` where `DDEEFF` is the last 6 letters of the address. Supported LED strips on the other hand seem to advertise as `YH-AAEEFF` where `AA` is the first 2 letters and  `EEFF` is the last 4 letter of the address.
 
 For example, with the logs:
 
